@@ -18,7 +18,7 @@ public class WWW {
     public String viewUser(Principal user) {
         return String.format("<h1>Messages by %s</h1><a href='/logout'>Logout</a>", user.getName());
     }
-    //@GetMapping("/{user}/{messageId}")
+    @GetMapping("/{user}/{messageId}")
     public String viewMessage(@PathVariable String user, @PathVariable int messageId) {
         return String.format("<h1>Message %d from %s</h1><a href='/logout'>Logout</a>", 42, user);
     }
