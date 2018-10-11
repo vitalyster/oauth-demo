@@ -53,7 +53,7 @@ public class DemoApplicationTests {
         String profile = "/api/me";
         mockMvc.perform(get(profile))
                 .andExpect(status().isUnauthorized());
-        MvcResult result = mockMvc.perform(post("/oauth/token")
+        MvcResult result = mockMvc.perform(post("/api/oauth/token")
                 .with(httpBasic("client", "secret"))
                 .param("username", "user")
                 .param("password", "secret")
